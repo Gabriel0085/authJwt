@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->post('auth', 'Auth::create');
-$routes->post('insert', 'Home::insertUser');
+$routes->post('insert', 'Home::insertUser', ['filter' => 'authFilter']);
 
 /**
  * --------------------------------------------------------------------
